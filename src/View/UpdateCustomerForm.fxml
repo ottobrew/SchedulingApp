@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="updateCustomerForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateCustomerControl">
+   <children>
+      <Label fx:id="updateCustomerTitle" layoutX="275.0" layoutY="27.0" text="Update Customer">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="418.0" layoutY="101.0" text="Customer ID">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="103.0" text="Name">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="180.0" text="Address">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="255.0" text="Postal Code">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="255.0" text="Phone Number">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="updateDivisionCBox" layoutX="408.0" layoutY="330.0" onAction="#onUpSelectDivision" prefHeight="26.0" prefWidth="200.0" />
+      <ComboBox fx:id="updateCountryCBox" layoutX="153.0" layoutY="330.0" onAction="#onUpSelectCountry" prefHeight="26.0" prefWidth="135.0" />
+      <Label layoutX="69.0" layoutY="335.0" text="Country">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="335.0" text="Division">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="updateCustIDText" disable="true" layoutX="526.0" layoutY="97.0" prefHeight="26.0" prefWidth="84.0" />
+      <TextField fx:id="updateCustNameTxt" layoutX="138.0" layoutY="98.0" prefHeight="26.0" prefWidth="200.0" />
+      <TextField fx:id="updateCustAddressTxt" layoutX="151.0" layoutY="175.0" prefHeight="26.0" prefWidth="458.0" />
+      <TextField fx:id="updatePostalTxt" layoutX="169.0" layoutY="250.0" prefHeight="26.0" prefWidth="100.0" />
+      <TextField fx:id="updatePhoneTxt" layoutX="448.0" layoutY="250.0" />
+      <Button fx:id="updateCustomerSaveButton" layoutX="450.0" layoutY="419.0" mnemonicParsing="false" onAction="#onSaveUpdateCustomer" text="Save">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateCustomerCancelButton" layoutX="547.0" layoutY="419.0" mnemonicParsing="false" onAction="#onCancelUpdateCustomer" text="Cancel">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

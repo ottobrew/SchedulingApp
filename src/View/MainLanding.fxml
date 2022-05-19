@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainLandingScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainLandingControl">
+   <children>
+      <GridPane layoutX="30.0" layoutY="11.0" prefHeight="748.0" prefWidth="965.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="808.0" minWidth="10.0" prefWidth="803.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="0.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="357.0" minHeight="0.0" prefHeight="345.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="681.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="681.0" minHeight="10.0" prefHeight="216.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="681.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="681.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="apptsTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn fx:id="apptIdCol" prefWidth="52.0" text="Appt ID" />
+                <TableColumn fx:id="titleCol" prefWidth="69.0" text="Title" />
+                  <TableColumn fx:id="descripCol" prefWidth="118.0" text="Description" />
+                  <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+                  <TableColumn fx:id="contactCol" prefWidth="56.0" text="Contact" />
+                  <TableColumn fx:id="apptTypeCol" prefWidth="72.0" text="Type" />
+                  <TableColumn fx:id="startDTCol" prefWidth="119.0" text="Start Date/Time" />
+                  <TableColumn fx:id="endDTCol" prefWidth="115.0" text="End Date/Time" />
+                  <TableColumn fx:id="apptCustIdCol" prefWidth="77.0" text="Customer ID" />
+                  <TableColumn fx:id="userIdCol" prefWidth="48.0" text="User ID" />
+              </columns>
+            </TableView>
+            <TableView fx:id="customersTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+              <columns>
+                <TableColumn fx:id="customerCustIdCol" prefWidth="99.0" text="Customer ID" />
+                <TableColumn fx:id="custNameCol" prefWidth="143.0" text="Name" />
+                  <TableColumn fx:id="custAddressCol" prefWidth="270.0" text="Address" />
+                  <TableColumn fx:id="custPostalCol" minWidth="0.0" prefWidth="107.0" text="Postal Code" />
+                  <TableColumn fx:id="custPhoneCol" minWidth="0.0" prefWidth="111.0" text="Phone #" />
+                  <TableColumn fx:id="custDivisionCol" prefWidth="71.0" text="Division" />
+              </columns>
+            </TableView>
+            <Button fx:id="updateApptMain" mnemonicParsing="false" onAction="#onUpdateApptMain" prefWidth="131.0" text="Update Appointment" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="addApptMain" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAddApptMain" prefHeight="26.0" prefWidth="131.0" text="Add Appointment" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="-100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="deleteApptMain" mnemonicParsing="false" onAction="#onDeleteApptMain" prefWidth="131.0" text="Delete Appointment" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="updateCustomerMain" mnemonicParsing="false" onAction="#onUpdateCustomerMain" prefWidth="115.0" text="Update Customer" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="addCustomerMain" mnemonicParsing="false" onAction="#onAddCustomerMain" prefWidth="115.0" text="Add Customer" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="-100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="deleteCustomerMain" mnemonicParsing="false" onAction="#onDeleteCustomerMain" prefWidth="115.0" text="Delete Customer" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Appointments">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Customers" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <RadioButton fx:id="viewAllApptsRadio" mnemonicParsing="false" onAction="#onViewAllAppts" selected="true" text="View All">
+               <GridPane.margin>
+                  <Insets left="300.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+                <toggleGroup>
+                    <ToggleGroup fx:id="apptView" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="viewByMonthApptsRadio" layoutX="310.0" layoutY="21.0" mnemonicParsing="false" onAction="#onViewByMonthAppts" text="By Month" toggleGroup="$apptView">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="408.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="viewByWeekApptsRadio" layoutX="310.0" layoutY="21.0" mnemonicParsing="false" onAction="#onViewByWeekAppts" text="By Week" toggleGroup="$apptView">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="520.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <Label fx:id="currentTime" text="Current Time Display" GridPane.columnIndex="2" />
+            <Button fx:id="reportsButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReports" text="Reports" textAlignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

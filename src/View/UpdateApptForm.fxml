@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="updateApptForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateApptControl">
+   <children>
+      <Label layoutX="258.0" layoutY="31.0" text="Update Appointment">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="421.0" text="Assigned to">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="updateApptContact" layoutX="172.0" layoutY="417.0" onAction="#onUpdateApptContact" prefWidth="150.0" />
+      <Label layoutX="455.0" layoutY="82.0" text="Appointment ID">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="135.0" text="Title">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="191.0" text="Description">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="362.0" text="Location">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="362.0" text="Type">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="267.0" text="Date">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="135.0" text="Customer ID">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="462.0" layoutY="422.0" text="User ID">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="updateApptTitle" layoutX="125.0" layoutY="130.0" prefHeight="26.0" prefWidth="262.0" />
+      <TextField fx:id="updateApptDescription" layoutX="169.0" layoutY="186.0" prefHeight="26.0" prefWidth="458.0" />
+      <TextField fx:id="updateApptLocation" layoutX="506.0" layoutY="357.0" prefHeight="26.0" prefWidth="120.0" />
+      <TextField fx:id="updateApptStartTime" layoutX="473.0" layoutY="244.0" prefHeight="26.0" prefWidth="98.0" />
+      <TextField fx:id="updateApptId" disable="true" layoutX="549.0" layoutY="76.0" prefHeight="26.0" prefWidth="78.0" />
+      <ComboBox fx:id="updateApptType" layoutX="129.0" layoutY="357.0" onAction="#onUpdateApptType" prefHeight="26.0" prefWidth="192.0" />
+      <Button fx:id="updateApptSaveButton" layoutX="475.0" layoutY="477.0" mnemonicParsing="false" onAction="#onSaveUpdateAppt" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateApptCancelButton" layoutX="560.0" layoutY="477.0" mnemonicParsing="false" onAction="#onCancelUpdateAppt" prefHeight="27.0" prefWidth="65.0" text=" Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="updateApptDate" layoutX="169.0" layoutY="262.0" onAction="#onUpdateDate" prefHeight="26.0" prefWidth="170.0" />
+      <Label layoutX="383.0" layoutY="249.0" text="Start Time">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="updateApptEndTime" layoutX="473.0" layoutY="284.0" prefHeight="26.0" prefWidth="98.0" />
+      <Label layoutX="389.0" layoutY="289.0" text="End Time">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="updateApptCustId" layoutX="550.0" layoutY="130.0" onAction="#onUpdateApptCustId" prefHeight="26.0" prefWidth="76.0" />
+      <ComboBox fx:id="updateApptUserId" layoutX="537.0" layoutY="416.0" onAction="#onUpdateApptUserId" prefHeight="26.0" prefWidth="88.0" />
+   </children>
+</AnchorPane>

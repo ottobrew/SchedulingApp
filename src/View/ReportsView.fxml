@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsControl">
+   <children>
+      <Label layoutX="347.0" layoutY="22.0" text="Reports">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="81.0" text="Total Number of Customer Appointments by Type and Month">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="88.0" layoutY="189.0" text="View Schedule by Contact" />
+      <TableView fx:id="scheduleByContactTable" layoutX="89.0" layoutY="278.0" prefHeight="170.0" prefWidth="574.0">
+        <columns>
+          <TableColumn fx:id="schApptIdCol" prefWidth="57.0" text="Appt ID" />
+          <TableColumn fx:id="schTitleCol" prefWidth="66.0" text="Title" />
+            <TableColumn fx:id="schTypeCol" prefWidth="66.0" text="Type" />
+            <TableColumn fx:id="schDescCol" prefWidth="111.0" text="Description" />
+            <TableColumn fx:id="schStartCol" prefWidth="104.0" text="Start Date/Time" />
+            <TableColumn fx:id="schEndCol" prefWidth="96.0" text="End Date/Time" />
+            <TableColumn fx:id="schCustIdCol" prefWidth="73.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="typeComboBox" layoutX="122.0" layoutY="122.0" onAction="#onTypeComboBox" prefHeight="26.0" prefWidth="150.0" promptText="Select Type" />
+      <ComboBox fx:id="monthComboBox" layoutX="320.0" layoutY="122.0" onAction="#onMonthComboBox" prefHeight="26.0" prefWidth="128.0" promptText="Select Month" />
+      <Label fx:id="totalTypeMonth" layoutX="606.0" layoutY="127.0" text="         " />
+      <Label layoutX="88.0" layoutY="472.0" text="Total Appointments by Day of Week" />
+      <Label fx:id="totalDayOfWeek" layoutX="333.0" layoutY="520.0" text="          " />
+      <ComboBox fx:id="dayComboBox" layoutX="122.0" layoutY="515.0" onAction="#onDayComboBox" prefHeight="26.0" prefWidth="164.0" promptText="Select Day of Week" />
+      <Button fx:id="getTotalApptsButton" layoutX="494.0" layoutY="122.0" mnemonicParsing="false" onAction="#onGetTotalAppts" prefHeight="26.0" prefWidth="82.0" text="Get Total" />
+      <ComboBox fx:id="selContactNameComboBox" layoutX="122.0" layoutY="226.0" onAction="#onSelContactName" prefHeight="26.0" prefWidth="164.0" promptText="Select Contact Name" />
+      <Button fx:id="exitButton" layoutX="618.0" layoutY="519.0" mnemonicParsing="false" onAction="#onExit" prefHeight="26.0" prefWidth="44.0" text="Exit" />
+   </children>
+</AnchorPane>

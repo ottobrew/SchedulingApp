@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addCustomerForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCustomerControl">
+   <children>
+      <Label fx:id="addCustomerTitle" layoutX="277.0" layoutY="25.0" text="Contact Manager">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="441.0" layoutY="80.0" text="Contact ID">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="80.0" text="Contact Name">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="130.0" text="Address">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="177.0" text="Email Address">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="177.0" text="Phone Number">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="addDivisionCBox" layoutX="440.0" layoutY="376.0" onAction="#onAddSelectDivision" prefHeight="26.0" prefWidth="200.0" />
+      <ComboBox fx:id="addCountryCBox" layoutX="167.0" layoutY="376.0" onAction="#onAddSelectCountry" prefHeight="26.0" prefWidth="127.0" />
+      <Label layoutX="59.0" layoutY="381.0" text="Contact Type">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="381.0" text="Assigned To   ">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addCustIDText" disable="true" layoutX="528.0" layoutY="75.0" prefHeight="26.0" prefWidth="108.0" />
+      <TextField fx:id="addCustNameTxt" layoutX="175.0" layoutY="75.0" prefHeight="26.0" prefWidth="189.0" />
+      <TextField fx:id="addCustAddressTxt" layoutX="135.0" layoutY="125.0" prefHeight="26.0" prefWidth="503.0" />
+      <TextField fx:id="addPostalTxt" layoutX="169.0" layoutY="172.0" prefHeight="26.0" prefWidth="147.0" />
+      <TextField fx:id="addPhoneTxt" layoutX="498.0" layoutY="172.0" prefHeight="26.0" prefWidth="137.0" />
+      <Button fx:id="addCustomerSaveButton" layoutX="505.0" layoutY="436.0" mnemonicParsing="false" onAction="#onSaveAddCustomer" text="Save">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="addCustomerCancelButton" layoutX="579.0" layoutY="436.0" mnemonicParsing="false" onAction="#onCancelAddCustomer" text="Cancel">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="55.0" layoutY="242.0" text="Contact Preferences">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="242.0" text="Marketing Preferences">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="55.0" layoutY="270.0" mnemonicParsing="false" text="Phone" />
+      <CheckBox layoutX="55.0" layoutY="298.0" mnemonicParsing="false" text="Text" />
+      <CheckBox layoutX="55.0" layoutY="325.0" mnemonicParsing="false" text="Email" />
+      <CheckBox layoutX="432.0" layoutY="273.0" mnemonicParsing="false" text="Private" />
+      <CheckBox layoutX="432.0" layoutY="299.0" mnemonicParsing="false" text="Sharing with Partners" />
+      <CheckBox layoutX="432.0" layoutY="326.0" mnemonicParsing="false" text="Sharing with 3rd Party Advertisers" />
+      <CheckBox layoutX="175.0" layoutY="272.0" mnemonicParsing="false" text="Weekly" />
+      <CheckBox layoutX="175.0" layoutY="298.0" mnemonicParsing="false" text="Monthly" />
+      <CheckBox layoutX="175.0" layoutY="324.0" mnemonicParsing="false" text="No Contact" />
+   </children>
+</AnchorPane>
